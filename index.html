@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+        <v-container grid-list-md text-xs-center>
+			    <v-layout row wrap fill-height>
+			      <v-flex xs6>
+			        <v-card>
+			            <label>Test</label>
+			        </v-card>
+			      </v-flex>
+			      <v-flex xs6>
+			        <v-card>
+			          <v-text-field label="Include files" class = "item"></v-text-field>
+			        </v-card>
+			      </v-flex>
+			      <v-flex xs12>
+			        <v-card>
+			          <v-select
+			          :items="items"
+			          label="Test"
+			          class = "item"
+			          ></v-select>
+			        </v-card>
+			        <v-card>
+			          <v-radio-group v-model="radioGroup">
+			            <v-radio label="Radio 1" value="radio-1"></v-radio>
+			            <v-radio label="Radio 2" value="radio-2"></v-radio>
+			          </v-radio-group> 
+			        </v-card>
+			      </v-flex>  
+			    </v-layout>
+			  </v-container>
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+  <script>
+    new Vue({ 
+	    	el: '#app',
+	    	data: {
+				items: ['Foo','Bar','Fizz','Buzz'],
+	      checkbox:true,
+	      radioGroup: 1,
+	      switch1: true,
+	     	align:'align-center'
+			} 
+		})
+  </script>
+</body>
+</html>

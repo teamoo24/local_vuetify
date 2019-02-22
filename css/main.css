@@ -1,0 +1,20 @@
+.v-enter-active, .v-leave-active{
+	transition: opacity 1s;
+}
+/*opacity:0から1へのフェードイン&フェードアウト*/
+.v-enter, .v-leave-to {
+	opacity: 0;
+}
+
+.tuyoi {
+	color: red;
+}
+
+img {
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+img.hide {
+	opacity: 0;
+}
