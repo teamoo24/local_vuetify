@@ -10,31 +10,39 @@
   <div id="app">
     <v-app>
       <v-content>
-        <v-container grid-list-md text-xs-left>
-			    <v-layout row wrap fill-height>
-			      <v-flex xs12>
-			        <v-card height = "100px">
-			        	<label>Test</label>
-			          <input placeholder="insert here" class ="input">
-			        </v-card>
-			      </v-flex>
-			      <v-flex xs12>
-			        <v-card>
-			          <v-select
-			          :items="items"
-			          label="Test"
-			          class = "item"
-			          ></v-select>
-			        </v-card>
-			        <v-card>
-			          <v-radio-group v-model="radioGroup">
-			            <v-radio label="Radio 1" value="radio-1"></v-radio>
-			            <v-radio label="Radio 2" value="radio-2"></v-radio>
-			          </v-radio-group> 
-			        </v-card>
-			      </v-flex>  
-			    </v-layout>
-			  </v-container>
+      	<v-form>
+	        <v-container grid-list-md text-xs-left>
+				    <v-layout wrap>
+        			<v-flex xs12>
+				        <v-card height = "100px">
+				          <v-text-field
+				          	label="Test"
+				          	:rules="[rules.Uppercase]">
+				          </v-text-field>
+		         		</v-card>
+			        </v-flex>
+				      <v-flex xs12>
+				        <v-card>
+				          <v-select
+				          :items="items"
+				          label="Test"
+				          class = "item"
+				          value = true
+				          message = "['message']"
+				          ></v-select>
+				        </v-card>
+				        <v-card>
+				          <v-radio-group 
+				          v-model="radioGroup"
+				          row>
+				            <v-radio label="Radio 1" value="radio-1"></v-radio>
+				            <v-radio label="Radio 2" value="radio-2"></v-radio>
+				          </v-radio-group> 
+				        </v-card>
+				      </v-flex>  
+				    </v-layout>
+				  </v-container>
+				</v-form>
       </v-content>
     </v-app>
   </div>
